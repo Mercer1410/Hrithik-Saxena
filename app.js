@@ -82,22 +82,22 @@ var width = $("svg").width();
 var height = $("svg").height();
 
 var nodes = [
-  { color: "#9CE550", size: 40, title: "HTML5" },
-  { color: "#00743A", size: 40, title: "CSS3" },
-  { color: "#8F011B", size: 40, title: "JavaScript" },
-  { color: "#6126C4", size: 40, title: "Bootstrap 4" },
-  { color: "#C7A69F", size: 40, title: "DOM" },
-  { color: "#58C2B2", size: 40, title: "jQuery" },
-  { color: "#EE31A2", size: 40, title: "NodeJS" },
-  { color: "#495AED", size: 40, title: "ExpressJS" },
-  { color: "#43904B", size: 40, title: "REST" },
-  { color: "#BF20CD", size: 40, title: "MongoDB" },
-  { color: "#FC38DC", size: 40, title: "Auth" },
-  { color: "#3D8FB5", size: 40, title: "PassportJS" },
-  { color: "#6AEC5C", size: 40, title: "D3" },
-  { color: "#7840E8", size: 40, title: "SVG" },
-  { color: "#D1003A", size: 40, title: "ES2015" },
-  { color: "#8A1838", size: 40, title: "Async" }
+  { color: "#9CE550", size: $(window).width() < 768 ? 30 : 40, title: "HTML5" },
+  { color: "#00743A", size: $(window).width() < 768 ? 30 : 40, title: "CSS3" },
+  { color: "#8F011B", size: $(window).width() < 768 ? 30 : 40, title: "JavaScript" },
+  { color: "#6126C4", size: $(window).width() < 768 ? 30 : 40, title: "Bootstrap 4" },
+  { color: "#C7A69F", size: $(window).width() < 768 ? 30 : 40, title: "DOM" },
+  { color: "#58C2B2", size: $(window).width() < 768 ? 30 : 40, title: "jQuery" },
+  { color: "#EE31A2", size: $(window).width() < 768 ? 30 : 40, title: "NodeJS" },
+  { color: "#495AED", size: $(window).width() < 768 ? 30 : 40, title: "ExpressJS" },
+  { color: "#43904B", size: $(window).width() < 768 ? 30 : 40, title: "REST" },
+  { color: "#BF20CD", size: $(window).width() < 768 ? 30 : 40, title: "MongoDB" },
+  { color: "#FC38DC", size: $(window).width() < 768 ? 30 : 40, title: "Auth" },
+  { color: "#3D8FB5", size: $(window).width() < 768 ? 30 : 40, title: "PassportJS" },
+  { color: "#6AEC5C", size: $(window).width() < 768 ? 30 : 40, title: "D3" },
+  { color: "#7840E8", size: $(window).width() < 768 ? 30 : 40, title: "SVG" },
+  { color: "#D1003A", size: $(window).width() < 768 ? 30 : 40, title: "ES2015" },
+  { color: "#8A1838", size: $(window).width() < 768 ? 30 : 40, title: "Async" }
 ];
 
 var links = [];
@@ -137,7 +137,7 @@ var texts = svg.selectAll("text")
                   .attr("text-anchor", "middle")
                   .text(d => d.title)
                   .style("font-weight", "600")
-                  .style("font-size", "0.9em");
+                  .style("font-size", $(window).width() < 768 ? "0.7em" : "0.9em");
 var simulation = d3.forceSimulation(nodes);
 
 simulation
