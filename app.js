@@ -146,7 +146,7 @@ var texts = svg.selectAll("text")
                   .attr("text-anchor", "middle")
                   .text(d => d.title)
                   .style("font-weight", "600")
-                  .style("font-size", $(window).width() < 768 ? "0.7em" : "0.9em");
+                  .style("font-size", $(window).width() < 768 ? "0.6em" : "0.9em");
 var simulation = d3.forceSimulation(nodes);
 
 simulation

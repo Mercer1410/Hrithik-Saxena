@@ -18,6 +18,11 @@ body{
     border-radius: 50%;
     z-index: -1;
 }
+@media(max-width: 576px){
+    .circle{
+        display: none;
+    }
+}
 .front{
     height: 100vh;
     animation: bgChange 5s infinite;
