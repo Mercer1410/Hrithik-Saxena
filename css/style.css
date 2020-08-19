@@ -1,0 +1,209 @@
+html,body{
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden;
+}
+body{
+    background: #000000;
+    background: -webkit-linear-gradient(to right, #434343, #000000);
+    background: linear-gradient(to right, #434343, #000000);
+    position: relative;
+    overflow: hidden;
+}
+.circle {
+    position: absolute;
+    border: solid 0.2em #fff;
+    width: 40px; 
+    height: 40px; 
+    border-radius: 50%;
+    z-index: -1;
+}
+.front{
+    height: 100vh;
+    animation: bgChange 5s infinite;
+}
+@keyframes bgChange {
+    from{
+        background: #000
+    }
+    50%{
+        background-color: transparent;
+    }
+    to{
+        background: #000;
+    }
+}
+.front h3{
+    color: #fff;
+}
+.front #name{
+    color: #f02985;
+}
+.front button{
+    padding: 1.5em;
+    font-size: 1.5em;
+    color: #fff;
+}
+.front button:hover{
+    border: 2px solid #f02985;
+    color: #f02985;
+}
+.front button i{
+    margin: auto 0.5em;
+    animation: bloop 2s infinite;
+}
+@keyframes bloop{
+    from{
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(1.5);
+    }
+    to{
+        transform: scale(1);
+    }
+}
+#MainNav{
+    background-color: #000;
+}
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(100,102,203, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+  
+.navbar-toggler {
+    border-color: rgba(100,102,203, 0.5);
+}
+.nav-item{
+    overflow: hidden;
+    font-size: 2em;
+    margin-right: 1.2em;
+    animation-name: zoomIn;
+    animation-duration: 2s;
+}
+@media (max-width: 814px){
+    .nav-item{
+        margin-right: 0.4em;
+    }
+}
+@media (max-width: 768px){
+    .nav-item{
+        font-size: 1.5em;
+        margin: auto;
+    }
+}
+.nav-link{
+    color: #f02985 !important;
+    letter-spacing: 0.2em;
+}
+.nav-link:hover{
+    color: #f00 !important;
+    animation-duration: 2s;
+    animation-name: hang;
+    animation-iteration-count: infinite;
+}
+@keyframes hang {
+    from {
+      transform: rotate(5deg);
+    }
+
+    50%{
+        transform: rotate(-5deg);
+    }
+  
+    to {
+      transform: rotate(5deg);
+    }
+}
+@keyframes zoomIn {
+    from {
+      transform: scale(0);
+    }
+    50%{
+        transform: scale(1.2);
+    }
+    to {
+      transform: scale(1);
+    }
+}
+.section-head{
+    background-color: rgba(150, 150, 150, 0.2);
+    color: #fff;
+}
+.section-title h1{
+    text-transform: uppercase;
+    font-weight: 800;
+    transform-origin: center;
+    font-size: 6em;
+    letter-spacing: 15px;
+}
+@media(min-width: 992px){
+    .section-title{
+        min-height: 60vh;
+    }
+    .section-title h1{
+        transform: rotate(-90deg);
+    }
+    #Skills .section-head h1{
+        transform: rotate(90deg);
+    }
+    #Profile{
+        min-height: 50vh;
+    }
+    #Skills .section-head{
+        height: 100vh;
+    }
+    #Projects .section-head{
+        min-height: 90vh;
+    }
+}
+
+#Details{
+    min-height: 50vh;
+}
+#Details p{
+    color: #fff;
+    font-size: 2em;
+}
+@media (min-width: 768px){
+    #Details p{
+        margin-top: 100px;
+    }
+}
+#Projects img{
+    width: 90%;
+    height: 100%;
+}
+@media(max-width: 768px){
+    #Projects img{
+        width: 75%;
+    }
+}
+#Projects .desc h3{
+    color: #f02985;
+}
+#Projects .desc p{
+    color: #fff;
+    text-align: justify;
+}
+#Projects .desc i{
+    color: #fff;
+    font-size: 1.5em;
+}
+
+.pic img{
+    height: 40vh;
+    margin: 2em auto;
+}
+svg{
+    display: block;
+    width: 100%;
+    height: 90vh;
+}
+.label{
+    cursor: default;
+}
+/* ==========PROJECTS============ */
+.rep, .desc{
+    width: 100%;
+    height: 30vh;
+}
