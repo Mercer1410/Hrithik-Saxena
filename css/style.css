@@ -156,6 +156,12 @@ body{
         min-height: 90vh;
     }
 }
+@media(max-width: 576px){
+    .section-title h1{
+        font-size: 4em;
+        letter-spacing: 0.09em;
+    }
+}
 
 #Details{
     min-height: 50vh;
@@ -211,5 +217,5 @@ svg{
 /* ==========PROJECTS============ */
 .rep, .desc{
     width: 100%;
-    height: 30vh;
+    min-height: 30vh;
 }
