@@ -80,24 +80,33 @@ $('a[href*="#"]')
 
 var width = $("svg").width();
 var height = $("svg").height();
+if($(window).width() < 576){
+  var size = 25;
+}
+else if($(window).width() < 768){
+  var size = 30;
+}
+else{
+  var size = 40;
+}
 
 var nodes = [
-  { color: "#9CE550", size: $(window).width() < 768 ? 30 : 40, title: "HTML5" },
-  { color: "#00743A", size: $(window).width() < 768 ? 30 : 40, title: "CSS3" },
-  { color: "#8F011B", size: $(window).width() < 768 ? 30 : 40, title: "JavaScript" },
-  { color: "#6126C4", size: $(window).width() < 768 ? 30 : 40, title: "Bootstrap 4" },
-  { color: "#C7A69F", size: $(window).width() < 768 ? 30 : 40, title: "DOM" },
-  { color: "#58C2B2", size: $(window).width() < 768 ? 30 : 40, title: "jQuery" },
-  { color: "#EE31A2", size: $(window).width() < 768 ? 30 : 40, title: "NodeJS" },
-  { color: "#495AED", size: $(window).width() < 768 ? 30 : 40, title: "ExpressJS" },
-  { color: "#43904B", size: $(window).width() < 768 ? 30 : 40, title: "REST" },
-  { color: "#BF20CD", size: $(window).width() < 768 ? 30 : 40, title: "MongoDB" },
-  { color: "#FC38DC", size: $(window).width() < 768 ? 30 : 40, title: "Auth" },
-  { color: "#3D8FB5", size: $(window).width() < 768 ? 30 : 40, title: "PassportJS" },
-  { color: "#6AEC5C", size: $(window).width() < 768 ? 30 : 40, title: "D3" },
-  { color: "#7840E8", size: $(window).width() < 768 ? 30 : 40, title: "SVG" },
-  { color: "#D1003A", size: $(window).width() < 768 ? 30 : 40, title: "ES2015" },
-  { color: "#8A1838", size: $(window).width() < 768 ? 30 : 40, title: "Async" }
+  { color: "#9CE550", size: size, title: "HTML5" },
+  { color: "#00743A", size: size, title: "CSS3" },
+  { color: "#8F011B", size: size, title: "JavaScript" },
+  { color: "#6126C4", size: size, title: "Bootstrap 4" },
+  { color: "#C7A69F", size: size, title: "DOM" },
+  { color: "#58C2B2", size: size, title: "jQuery" },
+  { color: "#EE31A2", size: size, title: "NodeJS" },
+  { color: "#495AED", size: size, title: "ExpressJS" },
+  { color: "#43904B", size: size, title: "REST" },
+  { color: "#BF20CD", size: size, title: "MongoDB" },
+  { color: "#FC38DC", size: size, title: "Auth" },
+  { color: "#3D8FB5", size: size, title: "PassportJS" },
+  { color: "#6AEC5C", size: size, title: "D3" },
+  { color: "#7840E8", size: size, title: "SVG" },
+  { color: "#D1003A", size: size, title: "ES2015" },
+  { color: "#8A1838", size: size, title: "Async" }
 ];
 
 var links = [];
