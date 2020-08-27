@@ -141,8 +141,24 @@ body{
     font-size: 6em;
     letter-spacing: 15px;
 }
+/* ==========PROJECTS============ */
+.rep, .desc{
+    width: 100%;
+    min-height: 30vh;
+}
+#Projects .desc h3{
+    color: #f02985;
+}
+#Projects .desc p{
+    color: #fff;
+    text-align: justify;
+}
+#Projects .desc i{
+    color: #fff;
+    font-size: 1.5em;
+}
 @media(min-width: 992px){
-    .section-title{
+    .section-head{
         min-height: 60vh;
     }
     .section-title h1{
@@ -150,9 +166,6 @@ body{
     }
     #Skills .section-head h1{
         transform: rotate(90deg);
-    }
-    #Profile{
-        min-height: 50vh;
     }
     #Skills .section-head{
         height: 100vh;
@@ -165,6 +178,9 @@ body{
     .section-title h1{
         font-size: 4em;
         letter-spacing: 0.09em;
+    }
+    .desc h3{
+        font-size: 3.5em;
     }
 }
 
@@ -189,18 +205,6 @@ body{
         width: 75%;
     }
 }
-#Projects .desc h3{
-    color: #f02985;
-}
-#Projects .desc p{
-    color: #fff;
-    text-align: justify;
-}
-#Projects .desc i{
-    color: #fff;
-    font-size: 1.5em;
-}
-
 .pic img{
     height: 40vh;
     margin: 2em auto;
@@ -218,9 +222,4 @@ svg{
 }
 .label{
     cursor: default;
-}
-/* ==========PROJECTS============ */
-.rep, .desc{
-    width: 100%;
-    min-height: 30vh;
 }
