@@ -106,7 +106,10 @@ var nodes = [
   { color: "#6AEC5C", size: size, title: "D3" },
   { color: "#7840E8", size: size, title: "SVG" },
   { color: "#D1003A", size: size, title: "ES2015" },
-  { color: "#8A1838", size: size, title: "Async" }
+  { color: "#8A1838", size: size, title: "Async" },
+  { color: "#8D1867", size: size, title: "Git" },
+  { color: "#8B2889", size: size, title: "Python" },
+  { color: "#8E3812", size: size, title: "C++" },
 ];
 
 var links = [];
