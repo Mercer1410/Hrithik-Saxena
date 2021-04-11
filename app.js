@@ -101,6 +101,7 @@ var nodes = [
   { color: "#43904B", size: size, title: "REST" },
   { color: "#FC38DC", size: size, title: "Auth" },
   { color: "#3D8FB5", size: size, title: "PassportJS" },
+  { color: "#E38B1D", size: size, title: "Firebase" },
   { color: "#6AEC5C", size: size, title: "D3" },
   { color: "#7840E8", size: size, title: "SVG" },
   { color: "#D1003A", size: size, title: "ES2015" },

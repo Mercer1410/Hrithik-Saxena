@@ -223,3 +223,63 @@ svg{
 .label{
     cursor: default;
 }
+
+/* CONTACT */
+#Contact .container, #Contact .contactBody{
+    height: 400px;
+}
+#Contact .contactBody .col-5{
+    height: 25%;
+}
+#Contact .contactContainer{
+    height: 100%;
+    font-size: 20px;
+    cursor: pointer;
+    text-decoration: none;
+    color: #fff;
+}
+#Contact .contactIcon{
+    font-size: 70px;
+    width: 25%;
+}
+#Contact .contactDetail{
+    text-align: center;
+    width: 70%;
+    word-wrap: break-word;
+}
+
+@media (max-width: 1200px){
+    #Contact .contactContainer{
+        font-size: 15px;
+    }
+    #Contact .contactIcon{
+        font-size: 50px;
+    }
+}
+
+@media (min-width: 992px) {
+    #Contact .section-title h1{
+        transform: rotate(90deg);
+    }
+    #Contact .container, #Contact .contactBody{
+        height: 100%;
+    }
+    #Contact .contactBody .col-5{
+        height: 20%;
+    }
+    #Contact .contactContainer{
+        height: 100%;
+        font-size: 20px;
+        cursor: pointer;
+        text-decoration: none;
+        color: #fff;
+    }
+    #Contact .contactIcon{
+        font-size: 70px;
+    }
+}
+@media(max-width: 768px){
+    #Contact .contactIcon{
+        font-size: 40px;
+    }
+}
