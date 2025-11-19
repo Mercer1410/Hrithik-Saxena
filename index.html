@@ -1,287 +1,335 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <!-- FonAwesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
-    <link rel="stylesheet" href="./css/font-mfizz-2.4.1/font-mfizz.css">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hrithik Saxena - Full Stack Developer</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-    <link rel="stylesheet" href="./css/style.css">
+        :root {
+            --primary: #2563eb;
+            --primary-dark: #1e40af;
+            --text: #1f2937;
+            --text-light: #6b7280;
+            --bg: #ffffff;
+            --bg-alt: #f9fafb;
+            --border: #e5e7eb;
+        }
 
-    <title>Hrithik Saxena || Full Stack Developer</title>
-  </head>
-  <body>
-    <span id="circle" class="circle"></span>
-    <div class="front d-flex flex-row align-items-center">
-      <div class="container text-center">
-        <h3 class="display-3">Hello, I'm <span id="name">Hrithik Saxena</span>.<br>I'm a Full Stack Developer</h3>
-        <a href="#MainNav"><button class="btn btn-lg">Learn More<i class="fas fa-arrow-down"></i></button></a>
-      </div>
+        body {
+            font-family: monospace;
+            line-height: 1.6;
+            color: var(--text);
+            background: var(--bg);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .italics {
+            font-style: italic;
+        }
+
+        /* Header Styles */
+        header {
+            text-align: center;
+            padding: 3rem 0;
+            /* border-bottom: 2px solid var(--border); */
+            /* margin-bottom: 2rem; */
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .tagline {
+            font-size: 1.2rem;
+            color: var(--text-light);
+            margin-bottom: 1rem;
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+            margin-top: 1rem;
+        }
+
+        .contact-info a {
+            color: var(--text-light);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .contact-info a:hover {
+            color: var(--primary);
+        }
+
+        /* Section Styles */
+        section {
+            margin-bottom: 2.5rem;
+        }
+
+        h2 {
+            font-size: 1.75rem;
+            color: var(--primary);
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--border);
+        }
+
+        h3 {
+            font-size: 1.25rem;
+            color: var(--text);
+            margin-bottom: 0.5rem;
+        }
+
+        .job-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            flex-wrap: wrap;
+            margin-bottom: 0.5rem;
+        }
+
+        .company {
+            font-weight: 600;
+            color: var(--text);
+            font-size: 1.1rem;
+        }
+
+        .duration {
+            color: var(--text-light);
+            font-size: 0.95rem;
+        }
+
+        .role-progression {
+            font-style: italic;
+            color: var(--text-light);
+            margin-bottom: 0.75rem;
+            font-size: 0.95rem;
+        }
+
+        ul {
+            margin-left: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        li {
+            margin-bottom: 0.5rem;
+        }
+
+        .skills-list {
+            line-height: 1.8;
+        }
+
+        .education-item {
+            margin-bottom: 0.75rem;
+        }
+
+        .education-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+        }
+
+        /* Print Styles */
+        @media print {
+            @page {
+                margin: 0.4in 0.5in;
+                size: letter;
+            }
+
+            body {
+                font-size: 9.5pt;
+                line-height: 1.3;
+            }
+
+            .container {
+                max-width: 100%;
+                padding: 0;
+            }
+
+            header {
+                padding: 0 0 0.35rem 0;
+                /* margin-bottom: 0.4rem; */
+                /* border-bottom: 1.5pt solid var(--border); */
+            }
+
+            h1 {
+                font-size: 20pt;
+                margin-bottom: 0.15rem;
+            }
+
+            .tagline {
+                font-size: 9.5pt;
+                margin-bottom: 0.3rem;
+            }
+
+            .contact-info {
+                gap: 1rem;
+                margin-top: 0.3rem;
+                font-size: 9pt;
+            }
+
+            h2 {
+                font-size: 11pt;
+                margin-top: 0.4rem;
+                margin-bottom: 0.3rem;
+                padding-bottom: 0.15rem;
+                page-break-after: avoid;
+                border-bottom: 1pt solid var(--border);
+            }
+
+            h3 {
+                font-size: 10pt;
+                page-break-after: avoid;
+                margin-bottom: 0.2rem;
+            }
+
+            section {
+                margin-bottom: 0.5rem;
+                page-break-inside: avoid;
+            }
+
+            ul {
+                margin-left: 1.1rem;
+                margin-bottom: 0.3rem;
+            }
+
+            li {
+                margin-bottom: 0.15rem;
+                page-break-inside: avoid;
+            }
+
+            .job-header {
+                margin-bottom: 0.2rem;
+            }
+
+            .role-progression {
+                margin-bottom: 0.3rem;
+                font-size: 9pt;
+            }
+
+            .company {
+                font-size: 10pt;
+            }
+
+            .duration {
+                font-size: 9pt;
+            }
+
+            .education-item {
+                margin-bottom: 0.3rem;
+            }
+
+            p {
+                margin-bottom: 0.2rem;
+            }
+
+            .skills-list {
+                line-height: 1.5;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Hrithik Saxena</h1>
+            <p class="tagline">Full Stack Developer</p>
+            <div class="contact-info">
+                <a href="https://www.linkedin.com/in/hrithik-saxena-185027169" target="_blank">https://www.linkedin.com/in/hrithik-saxena-185027169</a>
+                <a href="https://github.com/Mercer1410" target="_blank">https://github.com/Mercer1410</a>
+            </div>
+            <div class="contact-info">
+                <a href="mailto:saxena.hrithik14@gmail.com">saxena.hrithik14@gmail.com</a>
+                <a href="tel:+916383690986">+91 6383690986</a>
+            </div>
+        </header>
+
+        <section id="summary">
+            <h2>Professional Summary</h2>
+            <p>Full Stack Developer with 3+ years of experience building scalable, high-performance applications using Java, JavaScript, React.js, Spring Boot, Node.js, and AWS. Strong expertise in designing and developing end-to-end features, implementing secure authentication, and optimizing application performance. Skilled in microservices, cloud deployments, and database tuning. Highly collaborative and Agile-driven, with a proven ability to deliver innovative full-stack solutions that enhance user experience and drive business value.</p>
+        </section>
+
+        <section id="experience">
+            <h2>Professional Experience</h2>
+            
+            <div class="job">
+                <div class="job-header">
+                    <span class="company">HighRadius</span>
+                    <span class="duration italics">July 2022 - Present (> 3 years)</span>
+                </div>
+                <div class="role-progression">SDE-2 &#8592; ASE-2 &#8592; ASE-1</div>
+                
+                <ul>
+                    <li><strong>Delivered</strong> secure long-lived tokens for external API access, reducing system downtime by 15%</li>
+                    <li><strong>Led</strong> SSO implementation with Keycloak for multi-tenant architectures, reducing deployment time by 20%</li>
+                    <li><strong>Implemented</strong> OAuth 2.0-based multi-tenancy with account/role switching, improving efficiency by 35%</li>
+                    <li><strong>Designed</strong> Job Framework integrated with Argo Workflows, reducing manual configuration time by 60%</li>
+                    <li><strong>Developed</strong> a multidimensional data system with versioning and auditing for huge datasets, increasing retrieval efficiency by 30%.</li>
+                    <li><strong>Developed</strong> IAM features using Spring Security and Keycloak, reducing manual overhead by 25%</li>
+                    <li><strong>Established</strong> real-time notification framework using Atmosphere with role-based security layers</li>
+                    <li><strong>Optimized</strong> database queries, indexing, and caching strategies, achieving 95% reduction in response time</li>
+                    <li><strong>Resolved</strong> critical security vulnerabilities (SQL injection, privilege escalation, IDOR), reducing issues by 50%</li>
+                    <li><strong>Automated</strong> repetitive tasks using Bash, Python, Java, and Node.js scripts</li>
+                    <li><strong>Achieved</strong> 90%+ code coverage through comprehensive JUnit and Mockito testing</li>
+                    <li><strong>Built</strong> Angular SPA with RxJS for real-time updates, increasing task completion rates by 40%</li>
+                    <li><strong>Created</strong> Angular web application with optimized performance, boosting engagement by 30%</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="skills">
+            <h2>Technical Skills</h2>
+            <p class="skills-list"><strong>Languages:</strong> Java, JavaScript, Python, C, C++, TypeScript, HTML, CSS | <strong>Frontend:</strong> React.js, Angular, Bootstrap, jQuery | <strong>Backend:</strong> Spring Boot, Node.js, Express.js, Microservices | <strong>Databases:</strong> SQL, MongoDB, Query Optimization, Indexing | <strong>Security:</strong> Keycloak, OAuth 2.0, Spring Security | <strong>Testing:</strong> JUnit, Mockito, Postman, JMeter | <strong>Performance:</strong> Distributed Caching, Runtime Caching</p>
+        </section>
+
+        <section id="education">
+            <h2>Education</h2>
+            <div class="education-item">
+                <div class="education-header">
+                    <strong>B.Tech in Computer Science Engineering (Cloud Computing) - CGPA 9.39</strong>
+                    <span class="duration italics">2022</span>
+                </div>
+                <p>S.R.M Institute of Science and Technology</p>
+            </div>
+            <div class="education-item">
+                <div class="education-header">
+                    <strong>Senior Secondary (12th) - 93%</strong>
+                    <span class="duration italics">2018</span>
+                </div>
+                <p>Maa Bharti Sr Sec School, Kota, Rajasthan</p>
+            </div>
+            <div class="education-item">
+                <div class="education-header">
+                    <strong>Secondary (10th) - CGPA 10</strong>
+                    <span class="duration italics">2016</span>
+                </div>
+                <p>Kendriya Vidyalaya No 1, Bolangir, Odisha</p>
+            </div>
+        </section>
+
+        <section id="leadership">
+            <h2>Leadership & Achievements</h2>
+            <ul>
+                <li><strong>Led</strong> team of ~100 members as Web Development Head at WebArch, managing ~10 projects</li>
+                <li><strong>Developed</strong> complete website as Tech Lead for The LookThrou Magazine using WordPress</li>
+                <li><strong>Awarded</strong> Fresher of the Year (Oct 2022), Award of Applause (Apr 2024), Highako of Quarter Q4 2024</li>
+            </ul>
+        </section>
     </div>
-    <nav id="MainNav" class="navbar navbar-expand-md">
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#NavCollapse" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-    
-      <div class="collapse navbar-collapse" id="NavCollapse">
-        <ul class="navbar-nav ml-auto flex-wrap flex-row">
-          <li class="nav-item">
-            <a class="nav-link" href="#About">About</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#Skills">Skills</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#Projects">Projects</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#Contact">Contact</a>
-          </li>
-        </ul>
-      </div>
-    </nav>
-    <section id="About">
-      <div class="row my-2">
-        <div class="section-head col-12 col-lg-2">
-          <div style="height: 100%;" class="section-title d-flex flex-row justify-content-center align-items-center">
-            <h1>About</h1>
-          </div>
-        </div>
-        <div class="col-12 col-lg-10" style="background: rgba(0, 0, 0, 0.2);">
-          <div id="about" class="row">
-            <div id="Profile" class="col-12 col-md-4">
-              <div class="pic text-center">
-                <img src="./images/profile.jpeg" alt="" class="img-fluid rounded">
-              </div>
-            </div>
-            <div id="Details" class="col-12 col-md-8">
-              <p class="lead text-center">Complex problem-solver with an analytical and driven mindset. Dedicated to achieving demanding development objectives according to tight schedules while producing impeccable code.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section id="Skills">
-      <div class="row my-2">
-        <div class="section-head col-12 col-lg-2 order-1 order-lg-2">
-          <div style="height: 100%;" class="section-title d-flex flex-row justify-content-center align-items-center">
-            <h1>Skills</h1>
-          </div>
-        </div>
-        <div class="col-12 col-lg-10 order-2 order-lg-1" style="background: rgba(0, 0, 0, 0.2);">
-          <div class="row justify-content-center">
-            <div class="col-12 col-md-10">
-              <svg 
-                version="1.1"
-                baseProfile="full"
-                xmlns="http://www.w3.org/2000/svg" >
-              </svg>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section id="Projects">
-      <div class="row my-2">
-        <div class="section-head col-12 col-lg-2 align-items-stretch">
-          <div style="height: 100%;" class="section-title d-flex flex-row justify-content-center align-items-center">
-            <h1>Projects</h1>
-          </div>
-        </div>
-        <div class="col-12 col-lg-10" style="background: rgba(0, 0, 0, 0.2);">
-          <div class="row my-5">
-            <div class="col-12 col-md-6 rep text-center">
-              <a href="https://alumni-portal-hs.herokuapp.com/" target="_blank"><img src="./images/projects/Alumni.jpg" alt="Alumni" class="img-fluid rounded"></a>
-            </div>
-            <div class="col-12 col-md-6 desc">
-              <h3 class="display-3 text-center">M.I.L.A.P</h3>
-              <p class="lead text-center">An alumni Portal, a place for an alumni to get connected with others and provide opportunities to others.</p>
-              <div class="d-flex flex-row justify-content-around flex-wrap utils">
-                <i class="icon-html5"></i>
-                <i class="icon-css3"></i>
-                <i class="icon-bootstrap"></i>
-                <i class="icon-nodejs"></i>
-                <i>Express.js</i>
-                <i class="icon-npm"></i>
-                <i class="icon-mongodb"></i>
-              </div>
-            </div>
-          </div>
-          <div class="row my-5 align-items-stretch">
-            <div class="col-12 col-md-6 desc order-2 order-md-1">
-              <h3 class="display-3 text-center">Startup Page</h3>
-              <p class="lead text-center">Simple and elegant Startup Page Layout.</p>
-              <div class="d-flex flex-row justify-content-center flex-wrap utils">
-                <i class="icon-html5 mx-3"></i>
-                <i class="icon-css3 mx-2"></i>
-              </div>
-            </div>
-            <div class="col-12 col-md-6 rep text-center order-1 order-md-2">
-              <a href="https://mercer1410.github.io/StartupPage/" target="_blank"><img src="./images/projects/Startup.jpg" alt="Startup" class="img-fluid rounded"></a>
-            </div>
-          </div>
-          <div class="row my-5 align-items-stretch">
-            <div class="col-12 col-md-6 rep text-center">
-              <a href="https://yelpcamp-hs.herokuapp.com/" target="_blank"><img src="./images/projects/YelpCamp.jpg" alt="YelpCamp" class="img-fluid rounded"></a>
-            </div>
-            <div class="col-12 col-md-6 desc">
-              <h3 class="display-3 text-center">YelpCamp</h3>
-              <p class="lead text-center">Browse through campgrounds and add your own places of interests too!!</p>
-              <div class="d-flex flex-row justify-content-around flex-wrap utils">
-                <i class="icon-html5"></i>
-                <i class="icon-css3"></i>
-                <i class="icon-bootstrap"></i>
-                <i class="icon-nodejs"></i>
-                <i>Express.js</i>
-                <i class="icon-npm"></i>
-                <i class="icon-mongodb"></i>
-              </div>
-            </div>
-          </div>
-          <div class="row my-5 align-items-stretch">
-            <div class="col-12 col-md-6 desc order-2 order-md-1">
-              <h3 class="display-3 text-center">Dashboard</h3>
-              <p class="lead text-center">Dashboard made with D3 playing with CO<sub>2</sub> data.</p>
-              <div class="d-flex flex-row justify-content-around flex-wrap utils">
-                <i class="icon-html5"></i>
-                <i class="icon-css3"></i>
-                <i class="icon-d3"></i>
-              </div>
-            </div>
-            <div class="col-12 col-md-6 rep text-center order-1 order-md-2">
-              <a href="https://mercer1410.github.io/DashboardWithD3/" target="_blank"><img src="./images/projects/Dashboard.jpg" alt="Dashboard" class="img-fluid rounded"></a>
-            </div>
-          </div>
-          <div class="row my-5 align-items-stretch">
-            <div class="col-12 col-md-6 rep text-center">
-              <a href="https://covid-19-web-tracker.herokuapp.com/" target="_blank"><img src="./images/projects/Covid.jpg" alt="Covid" class="img-fluid rounded"></a>
-            </div>
-            <div class="col-12 col-md-6 desc">
-              <h3 class="display-3 text-center">Covid-19</h3>
-              <p class="lead text-center">COVID awareness site showing cases all over the world and specific to user defined places. Get updated with covid headlines all around too!</p>
-              <div class="d-flex flex-row justify-content-around flex-wrap utils">
-                <i class="icon-html5"></i>
-                <i class="icon-css3"></i>
-                <i class="icon-bootstrap"></i>
-                <i class="icon-nodejs"></i>
-                <i>Express.js</i>
-                <i class="icon-npm"></i>
-              </div>
-            </div>
-          </div>
-          <div class="row my-5 align-items-stretch">
-            <div class="col-12 col-md-6 desc order-2 order-md-1">
-              <h3 class="display-3 text-center">Todos</h3>
-              <p class="lead text-center">Todo App made with Todo API</p>
-              <div class="d-flex flex-row justify-content-around flex-wrap utils">
-                <i class="fab fa-html5"></i>
-                <i class="fab fa-css3-alt"></i>
-                <i class="fab fa-node-js"></i>
-                <i class="icon-mongodb"></i>
-              </div>
-            </div>
-            <div class="col-12 col-md-6 rep text-center order-1 order-md-2">
-              <a href="https://hrithik-todo-app.herokuapp.com/" target="_blank"><img src="./images/projects/todo.jpg" alt="Todo" class="img-fluid rounded"></a>
-            </div>
-          </div>
-          <div class="row my-5 align-items-stretch">
-            <div class="col-12 col-md-6 rep text-center">
-              <a href="https://mercer1410.github.io/ColorGame/" target="_blank"><img src="./images/projects/ColorGame.jpg" alt="ColorGame" class="img-fluid rounded"></a>
-            </div>
-            <div class="col-12 col-md-6 desc">
-              <h3 class="display-3 text-center">Color Game</h3>
-              <p class="lead text-center">Simple RGB color Guessing game with difficulty levels.</p>
-              <div class="d-flex flex-row justify-content-around flex-wrap utils">
-                <i class="fab fa-html5"></i>
-                <i class="fab fa-css3-alt"></i>
-                <i class="fab fa-js-square"></i>
-              </div>
-            </div>
-          </div>
-          <div class="row my-5 align-items-stretch">
-            <div class="col-12 col-md-6 desc order-2 order-md-1">
-              <h3 class="display-3 text-center">Warbler</h3>
-              <p class="lead text-center">Message Timeline App using MERN stack.</p>
-              <div class="d-flex flex-row justify-content-around flex-wrap utils">
-                <i class="icon-mongodb"></i>
-                <i>Express.js</i>
-                <i class="fab fa-react"></i>
-                <i class="fab fa-node-js"></i>
-              </div>
-            </div>
-            <div class="col-12 col-md-6 rep text-center order-1 order-md-2">
-              <a href="https://warbler-client-hs.herokuapp.com/" target="_blank"><img src="./images/projects/Warbler.png" alt="Todo" class="img-fluid rounded"></a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section id="Contact">
-      <div class="row my-2" style="min-height: 590px;">
-        <div class="section-head col-12 col-lg-2 order-1 order-lg-2">
-          <div style="height: 100%;" class="section-title d-flex flex-row justify-content-center align-items-center">
-            <h1>Contact</h1>
-          </div>
-        </div>
-        <div class="col-12 col-lg-10 order-2 order-lg-1" style="background: rgba(0, 0, 0, 0.2);">
-          <div class="container">
-            <div class="row contactBody p-0 m-1 justify-content-center align-items-center text-light">
-              <div class="col-10 col-sm-5 m-1 border border-danger rounded">
-                <a href="https://github.com/Mercer1410" target="_blank" class="contactContainer d-flex flex-row justify-content-around align-items-center">
-                  <div class="contactIcon text-center">
-                    <i class="fab fa-github-alt"></i>
-                  </div>
-                  <div class="contactDetail">
-                    <p>https://github.com/Mercer1410</p>
-                  </div>
-                </a>
-              </div>
-              <div class="col-10 col-sm-5 m-1 border border-danger rounded">
-                <a href="https://www.linkedin.com/in/hrithik-saxena-185027169/" target="_blank" class="contactContainer d-flex flex-row justify-content-around align-items-center">
-                  <div class="contactIcon text-center order-2">
-                    <i class="fab fa-linkedin-in"></i>
-                  </div>
-                  <div class="contactDetail order-1">
-                    <p>https://www.linkedin.com/in/hrithik-saxena-185027169/</p>
-                  </div>
-                </a>
-              </div>
-              <div class="col-10 col-sm-5 m-1 border border-danger rounded">
-                <a href="https://www.instagram.com/hrithik1804/" target="_blank" class="contactContainer d-flex flex-row justify-content-around align-items-center">
-                  <div class="contactIcon text-center">
-                    <i class="fab fa-instagram"></i>
-                  </div>
-                  <div class="contactDetail">
-                    <p>https://www.instagram.com/hrithik1804/</p>
-                  </div>
-                </a>
-              </div>
-              <div class="col-10 col-sm-5 m-1 border border-danger rounded">
-                <a href="mailto:hs7582@srmist.edu.in" class="contactContainer d-flex flex-row justify-content-around align-items-center">
-                  <div class="contactIcon text-center order-2">
-                    <i class="far fa-envelope"></i>
-                  </div>
-                  <div class="contactDetail order-1">
-                    <p>hs7582@srmist.edu.in</p>
-                  </div>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
-    <script src="https://d3js.org/d3.v4.js"></script>
-    <script src="app.js"></script>
-  </body>
+</body>
 </html>
